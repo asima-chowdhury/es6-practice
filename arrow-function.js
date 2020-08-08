@@ -40,8 +40,8 @@ console.log(result4);
 const doMath = (x,y) =>{
     const sum = x+y;
     const diff = x-y;
-    const result5 = sum * diff;
-    return result5;
+    const result = sum * diff;
+    return result;
 }
 const result5 = doMath (7,5);
 console.log(result5);
