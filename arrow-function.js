@@ -24,8 +24,8 @@ const result1 = add(10, 20);
 console.log(result1);
 
 /*------ single line function ---*/
-const squareIt = num => num * num; // multiple parameter
-const sub = (x, y) => x - y; // single parameter
+const squareIt = num => num * num; // single parameter
+const sub = (x, y) => x - y; // multiple parameter
 const give5 = () => 5; // zero parameter
 
 const result2 = squareIt(10);
