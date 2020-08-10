@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+
+<body>
+    <h1>This Keyword</h1>
+    <p onclick="this.innerText = 'You clicked'">I am a paragraph</p>
+    <script>
+        const myObj = {
+            name: "Asima",
+            getFullName: function () {
+                console.log(this);
+                return 'Miss.' + this.name;
+            }
+        }
+
+        const anotherObj = {
+            name: 'Arham'
+        }
+        /*
+        anotherObj.getFullName = myObj.getFullName;
+        console.log(anotherObj.getFullName);   //output->> ƒ (){console.log(this);return 'Miss.' + this.name;} 
+        myObj.getFullName();  //output of 16number line ->> {name: "Asima", getFullName: ƒ} 
+        anotherObj.getFullName();   //output of 16number line ->> {name: "Arham", getFullName: ƒ}
+        */
+        function add(a, b) {
+            console.log(this);
+            return a + b;
+        }
+        add(12, 13);//output->> Window {parent: Window,......}
+        anotherObj.sum = add;
+        anotherObj.sum();//output->> {name: "Arham", sum: ƒ}
+
+        setTimeout(function(){
+            console.log(this);//output->> Window {parent: Window,......}
+        },1000)
+    </script>
+</body>
+
+</html>
